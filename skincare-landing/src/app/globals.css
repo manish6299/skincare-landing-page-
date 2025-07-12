@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Base global styles */
+body {
+  @apply bg-[#fefefc] text-gray-600 font-sans;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* 2. Header */
+header {
+  @apply sticky top-0 z-50 bg-white shadow-sm;
+}
+
+nav a {
+  @apply hover:text-black transition-colors duration-200;
+}
+
+/* 3. Hero Section */
+.hero-section {
+  @apply relative flex flex-col items-center md:flex-row gap-8 md:gap-16 p-8 md:p-20 bg-[#f9f9f9];
+}
+
+.hero-image {
+  @apply rounded-lg shadow-md w-full md:w-[400px] object-cover;
+}
+
+.hero-text h2 {
+  @apply text-5xl font-extrabold leading-tight mb-4 text-gray-900;
+}
+
+.hero-text p {
+  @apply text-lg text-gray-700 max-w-md;
+}
+
+.btn-primary {
+  @apply mt-6 inline-block bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition;
+}
+
+/* 4. Big Background Text */
+.big-bg-text {
+  @apply absolute bottom-[-20px] left-0 text-[120px] font-black text-gray-200 opacity-20 leading-none pointer-events-none select-none;
+}
+
+/* 5. Product Cards */
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-8 py-16 bg-white;
+}
+
+.product-card {
+  @apply bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition;
+}
+
+.product-card img {
+  @apply w-full h-60 object-cover rounded-md mb-4;
+}
+
+.product-card h3 {
+  @apply text-xl font-semibold mb-2;
+}
+
+.product-card p {
+  @apply text-sm text-gray-600;
+}
+
+/* 6. FAQ */
+.faq-section {
+  @apply bg-gray-50 px-8 py-16;
+}
+
+.faq-section h2 {
+  @apply text-3xl font-bold mb-8;
+}
+
+.faq-item {
+  @apply mb-6;
+}
+
+.faq-item h4 {
+  @apply font-semibold text-lg mb-2;
+}
+
+.faq-item p {
+  @apply text-gray-600;
+}
+
+/* 7. Footer */
+footer {
+  @apply text-center text-sm text-gray-500 py-10 bg-white mt-20;
+}
+/* Tailwind-compatible scrollbar hiding */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+  }
+}
+
+.word {
+  display: inline-block;
+  
+}
+.word {
+  transition: opacity 0.4s ease-in-out;
+}
+/* styles/globals.css */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
